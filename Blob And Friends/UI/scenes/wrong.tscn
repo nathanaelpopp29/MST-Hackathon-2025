@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://ml7hocp00kdf"]
+
+[ext_resource type="FontFile" uid="uid://p8tgxd8rq81c" path="res://UI/CedarvilleCursive-Regular.ttf" id="1_cep1s"]
+[ext_resource type="Script" path="res://UI/scenes/wrong.gd" id="1_inhat"]
+[ext_resource type="Texture2D" uid="uid://8u6r37b1psv6" path="res://UI/Screenshot 2025-03-01 193107.png" id="3_fpgpt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n4b4x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5te7a"]
+bg_color = Color(0.796243, 0.796243, 0.796243, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.329158, 0.329158, 0.329158, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fvc3"]
+bg_color = Color(0.593134, 0.593134, 0.593134, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.329158, 0.329158, 0.329158, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oq141"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.329158, 0.329158, 0.329158, 0.6)
+shadow_size = 5
+
+[node name="wrong" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 644.0
+script = ExtResource("1_inhat")
+
+[node name="Button" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -14.0
+offset_right = 87.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n4b4x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5te7a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6fvc3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_oq141")
+text = "GO HOME"
+
+[node name="Label2" type="Label" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -426.0
+offset_top = -213.0
+offset_right = 158.0
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 10
+theme_override_fonts/font = ExtResource("1_cep1s")
+theme_override_font_sizes/font_size = 50
+text = "Nice try"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Screenshot2025-03-01193107" type="Sprite2D" parent="."]
+position = Vector2(577.75, 325)
+scale = Vector2(1.11994, 0.959184)
+texture = ExtResource("3_fpgpt")
+
+[connection signal="pressed" from="Button" to="." method="badluck"]

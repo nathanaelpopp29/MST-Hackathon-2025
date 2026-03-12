@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://b361e80ef2r7s"]
+
+[ext_resource type="Script" path="res://scripts/sign.gd" id="1_hdhrp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dwddd"]
+radius = 32.0
+
+[node name="Sign" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_hdhrp")
+
+[node name="Locations" type="Label" parent="."]
+offset_left = -67.0
+offset_top = -64.0
+offset_right = 77.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dwddd")
+
+[node name="ReadMe" type="Label" parent="."]
+offset_left = -17.0
+offset_top = 9.0
+offset_right = 23.0
+offset_bottom = 32.0
+theme_override_font_sizes/font_size = 10
+text = "X - Read"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

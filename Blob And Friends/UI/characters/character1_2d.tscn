@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://bc55yc8itlm1x"]
+
+[ext_resource type="Texture2D" uid="uid://yxy2syv48wgi" path="res://UI/image.png" id="1_51am0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pibgn"]
+atlas = ExtResource("1_51am0")
+region = Rect2(95, 0, 95, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g428n"]
+atlas = ExtResource("1_51am0")
+region = Rect2(190, 0, 95, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xknd4"]
+atlas = ExtResource("1_51am0")
+region = Rect2(285, 0, 95, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xyfr3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pibgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g428n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xknd4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 14.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(1, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.999985, 0)
+scale = Vector2(2.47105, 1.94196)
+sprite_frames = SubResource("SpriteFrames_xyfr3")
+autoplay = "default"
+frame = 2
+frame_progress = 0.571271
